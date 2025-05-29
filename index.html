@@ -3,14 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Captura de datos</title>
 </head>
 <body>
     
-    <p>Hola mundo</p>
-    <form action="">
-        <label for="Text">Texto</label>
+    <form action="formulario.html" method="get">
+        <label for="nombre">
+            Nombre del usuario:
+        </label>
+            <br>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+           
+        <br>
+        <label for="Apellidos">
+            Apellidos
+        </label>
+            <br>
+        <input type="text" id="Apellidos" name="Apellidos" placeholder="Escribe tus apellidos">
+           
+        <br>
+        <label for="Matricula">
+            Matricula
+        </label>
+            <br>
+        <input type="text" id="Matricula" name="Matricula">
+           
+        <br>
+        <label for="Direccion">
+            Calle y número
+        </label>
+            <br>
+        <input type="text" id="Direccion" name="Direccion">
         
+        <br>
+        <br>
+        
+        <input type="submit" value="Enviar datos">
+        <br>
+        <br>
+        <br>
+
+        <label for="text">
+            Tipo texto
+        </label>
+        <input type="text">
+        
+        <br>
+         <label for="busqueda">
+            Buscar
+        </label>
+        <input type="search" id="busqueda" name="busqueda">
+        
+        <br>
+        <label for="email">
+            Correo electronico
+        </label>
+        <input type="email" id="email" name="email">
+        
+        <br>
+        <label for="contraseña">
+            Ingresa tu contraseña
+        </label>
+        <input type="password" id="contraseña" name="contraseña">
+        
+        <br>
+        <label for="URL">
+            URL
+        </label>
+        <input type="url" name="URL" id="URL">
+        
+        <br>
+        <label for="campodetexto">
+            busquedas
+        </label>
+        
+        <br>
+        <textarea name="textarea" id="campodetexto"></textarea>
+        
+        <br>
+        <br>
+        <label for="numeros">
+            Tipos númericos
+        </label>
+        <input type="number" class="numeros" name="numeros" id="numeros">
+       
+        <br>
+        <label for="rango">
+            Rango de edades
+        </label>
+        <input type="range" name="rango" id="rango">
+        <br>
+        <label for="Fecha">
+            Fecha
+        </label>
+        <input type="date" name="Fecha" id="Fecha">
+        <br>
     </form>
 </body>
 </html>
