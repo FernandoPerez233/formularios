@@ -6,6 +6,18 @@
     <title>Formulario</title>
 </head>
 <body>
-    
+    <h2>Datos recibidos</h2>
+    <p id="nombre"></p> 
+    <p id="Apellidos"></p>
+    <p id="Matricula"></p>
+    <p id="Direccion"></p>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById("nombre").textContent = "nombre:  " + params.get("nombre");
+        document.getElementById("Apellidos").textContent = "Apellidos:  " + params.get("Apellidos");
+        document.getElementById("Matricula").textContent = "Matricula:  " + params.get("Matricula");
+        document.getElementById("Direccion").textContent = "Dirección:  " + params.get("Direccion");
+    </script>
 </body>
 </html>
