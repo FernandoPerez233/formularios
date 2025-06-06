@@ -6,6 +6,30 @@
     <title>Captura de datos</title>
 </head>
 
+<style>
+
+    .botonEnlace{
+        margin: auto;
+        display: block;
+        width: 20%;
+        padding: 20px;
+        background-color: #9a48c9;
+        font-family: Helvetica, sans-serif;
+        text-align: center;
+        color: white;
+        border-radius: 50px;
+        box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.50);
+        letter-spacing: 1px;
+        transition: background-color 1s ;
+        cursor: pointer;
+    }
+
+    .botonEnlace:hover{
+        background-color: #7a2ba7;
+    }
+
+
+</style>
 
 <body>
     
@@ -102,56 +126,28 @@
         <br>
         <br>
 
-        <input type="button" value="colores">
+        <button type="button" id="btnColores"> Colores</button>
+        <br>
         <br>
 
-        <input type="button" value="tablaColores">
+        <button type="button" id="btnTabla">Tabla de colores</button>
+        <input class="botonEnlace" type="button" id="botonClase" value="Soy un enlace. click aquí">
+
     </form>
-    <a href="tablaColores.html">Tabla colores</a>
-    <script>
-        document.querySelector('input[type="button"]').addEventListener('click', function() {
+   
+   <script>
+        document.getElementById('btnColores').addEventListener('click', function() {
             window.location.href = 'colores.html';
         });
-;
-document.querySelector('input[type="button"]').addEventListener('click', function() {
+
+    document.getElementById('btnTabla').addEventListener('click', function() {
             window.location.href = 'tablaColores.html';
         });
+
+
     </script>
 
     <br>
     <br>
-
-        <div class="desbordamiento">
-            <table>
-                <tr>
-                    <td>HtML5</td>
-                </tr>
-                <tr>
-                    <td>CSS3</td>
-                </tr>
-                <tr>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td></tr>       
-                <tr>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                </tr>        
-            </table>
-        </div>
-
-
 </body>
 </html>
