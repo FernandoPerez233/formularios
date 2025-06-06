@@ -16,25 +16,48 @@
             font-size: 15px;
             border-collapse: collapse;
         }
-
-        table th, table tr{
+    
+      .tabla1 th,
+        .tabla1 tr{
             border:3.5px solid #1c8ff5;
             padding: 5px 10px;
         }
         
-        table th,
-        table td:first-child{
+        
+       .tabla1 th,
+        .tabla1 td:first-child{
             background-color: #48a5f7;
             color: white;
             width: 100px;
             font-weight: 400;
         }
+
+        #despligue{
+        column-count: 3;
+        column-gap: 5em;
+        column-rule: 5px solid  #800080;
+        margin: 50px auto;
+        max-width: 1000px;
+    }
+
+    .tablaDespliegue{
+       background-color: #989ddf;
+        border: 5px solid#800080;
+        border-collapse: collapse;
+        color: white;
+        margin-bottom: 30px;
+        
+    }
+
+    .tablaDespliegue,tr {
+        border: 3.5px solid #ffffff;
+    }
     </style>
 </head>
 
 <body>
 
-    <table>
+    <table class="tabla1">
         <thead>
             <tr>
                 <th>ID</th>
@@ -111,6 +134,40 @@
                 </tr>
             </tbody>
     </table>
+    <br>
+    <br>
+    <br>
 
+    <div class="despliegue">
+            <table class="tablaDespliegue">
+                <tr>
+                    <td>HtML5</td>
+                </tr>
+                <tr>
+                    <td>CSS3</td>
+                </tr>
+                <tr>
+                    <td>JAVASCRIPT</td>
+                </tr>
+                <tr>
+                    <td>PHP</td>
+                </tr>       
+                <tr>
+                    <td>PYTHON</td>
+                </tr>
+                <tr>
+                    <td>BOOTSTRAP</td>
+                </tr>
+                <tr>
+                    <td>JQUERY</td>
+                </tr>
+                <tr>
+                    <td>ANGULAR</td>
+                </tr>
+                <tr>
+                    <td>RUBY</td>
+                </tr>        
+            </table>
+        </div>
 </body>
 </html>
