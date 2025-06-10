@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colores posicionamiento</title>
+</head>
+<style>
+
+    *{
+        font-family: Helvetica, sans-serif;
+    }
+
+    article{
+			border: 1px solid rgb(83, 109, 228);
+			margin-bottom: 100px;
+		}
+
+    div{
+        width: 200px;
+        height: 200px;
+        padding: 15px;
+        margin: 20px;
+		line-height: 200px;
+		text-align: center;
+    }
+
+    .bloque div{
+        display: block;
+    }
+
+    .enlinea div{  
+        display: inline-block;
+
+    }
+
+    .entabla div{
+        display: table-cell;
+    }
+
+    #relativo{
+        position: relative;
+        left: 300px;
+
+    }
+
+	#absoluto{
+        position: absolute;
+        right: 50px;
+    }
+
+	#fijo{
+        position: fixed;
+        background: blue;
+        color: white;
+        right: 100px;
+        top: 200px;
+    }
+
+    .flotante{
+        height: 400px;
+        width: 100%; 
+    }
+          
+    .flotante div{
+        float: left;
+    }
+
+    .flotante div:nth-child(2){
+        float: right;
+    }
+
+    .claseHexadecimal{
+        width: 200px;
+        height: 200px;
+        background-color: #46caae;
+        border: #ef3203 solid 5px;
+    }
+
+    .claseHLS{
+        width: 200px;
+        height: 200px;
+        background-color: hsl(0, 53%, 74%);
+        border: #ef3203 solid 5px;
+    }
+    
+    .claseRGB{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(250, 100, 100);
+        border: #ef3203 solid 5px;
+    }
+
+    .claseTransparencia{
+        width: 250px;
+        height: 250px;
+        background-color: transparent;
+        background-color: #46caae;
+        background-color: rgb(rgb(4, 255, 4), green, blue);
+        background-color: hsl(215, 54%, 23%);
+        border: #ef3203 solid 5px;
+    }
+
+    .claseDegradadov1{
+        width: 200px;
+        height: 200px;
+        background-image: linear-gradient(to right, #ef3203, #feb47b);
+        border: #ef3203 solid 5px;
+    }
+
+    .claseDegradadov2{
+        width: 200px;
+        height: 200px;
+       border: #ef3203 solid 5px;
+        background-image: radial-gradient(#9000f1, #4551f6, #00f1f1, #00f1f1);
+    }
+
+
+</style>
+
+<body>
+
+    
+     <h1>ELEMENTOS EN BLOQUE</h1>
+        <article class="bloque">
+        <div class="claseHexadecimal">
+            uno
+          </div>
+        <div class="claseHexadecimal">
+            dos
+          </div>
+        <div class="claseHexadecimal">
+            tres
+          </div>
+        <div class="claseHexadecimal">
+            cuatro
+          </div>
+     </article>
+
+     <h1>ELEMENTOS EN LINEA</h1>
+        <article class="enlinea">
+        <div class="claseHLS">
+            uno
+          </div>
+        <div class="claseHLS">
+            dos     
+          </div>
+        <div class="claseHLS">
+            tres
+          </div>
+        <div class="claseHLS">
+            cuatro
+          </div>
+        </article>
+
+     <h1>ELEMENTOS EN TABLA</h1>
+        <article class="entabla">
+        <div class="claseRGB">
+            uno
+          </div>
+        <div class="claseRGB">
+            dos
+          </div>
+        <div class="claseRGB">
+            tres
+          </div>
+        <div class="claseRGB">
+            cuatro
+          </div>
+        </article>
+
+     <h1>POSICIONAMIENTO</h1>
+        <article class="posicionamiento"> 
+        <div id="relativo" class="claseTransparencia">
+            uno
+          </div>
+          <div id="absoluto" class="claseTransparencia">
+            dos
+          </div>
+          <div id="fijo" class="claseTransparencia">
+            tres
+          </div>
+          <div  class="claseTransparencia">
+            cuatro
+          </div>
+        </article>
+
+     <h1>POSICIONAMIENTO FLOTANTE</h1>
+        <article class="flotante">
+        <div class="claseDegradadov1">
+            uno
+          </div>
+        <div class="claseDegradadov1">
+            dos
+          </div>
+        <div class="claseDegradadov1">
+            tres
+          </div>
+        <div class="claseDegradadov1">
+            cuatro
+          </div>
+        </article>
+
+
+</body>
+</html>
