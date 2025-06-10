@@ -110,9 +110,15 @@
         <br>
 
         <button type="button" id="btnTabla">Tabla de colores</button>
-        <input class="botonEnlace" type="button" id="botonClase" value="Soy un enlace. click aquí">
-        <a href="tabla.html">Tabla</a>
-        <a href="boton.html">Boton</a>
+        <br>
+        <br>
+       <button type="button" id="btnTablas">Tabla</button>  
+        <br>    
+        <br>
+       <button type="button" id="btnBoton">Boton</button> 
+       <br>
+       <br>
+       <button type="button" id="btnColoresPosicionamiento">Colores con posicionamiento</button>
     </form>
    
    <script>
@@ -124,7 +130,18 @@
             window.location.href = 'tablaColores.html';
         });
 
+        document.getElementById('btnTablas').addEventListener('click', function() {
+            window.location.href = 'tabla.html';
+        });
 
+       document.getElementById('btnBoton').addEventListener('click', function() {
+            window.location.href = 'boton.html';
+        });
+
+        document.getElementById('btnColoresPosicionamiento').addEventListener('click', function() {
+            window.location.href = 'colores-posicionamiento.html';
+        });
+    
     </script>
 
     <br>
