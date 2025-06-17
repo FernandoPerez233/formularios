@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso</title>
+</head>
+
+<style>
+   
+   *{
+        font-family: Helvetica, sans-serif;
+       
+    }
+
+    body{
+        background-color:#F7FAFC;
+        color: #f2f2f2;
+    }
+    form{
+        margin: 20px;
+        padding: 20px;
+        background-color: rgb(0, 0, 0);
+        
+        display: flex;
+        flex-direction:column;
+       justify-content: space-between;
+    }
+
+    .three-columns {
+        display: flex;
+        justify-content: center;
+    }
+
+    img{
+        width: 100px;
+        height: auto;
+    }
+    .marcas{
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        text-align: center;
+    }
+    .fields{
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .fields label{
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: #f2f2f2;
+        display: flex;
+        justify-content: flex-start;
+         align-items: center;
+         margin: 8px 0;
+       
+    }
+    .fields input[type="checkbox"],
+    input[type="radio"] {
+        cursor: pointer;
+        order: -1;
+    }
+
+    .img-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        justify-items: center;
+        align-items: center;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .btn{
+        background-color: #f2f2f2;
+        color: black;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        width: auto;
+        height: auto;
+    }
+
+    .estiloh1{
+        background-color: white;
+        color: black;
+    }
+
+    footer{
+        background-color: #A0AEC0;
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        
+    }
+</style>
+
+<body>
+    
+        <form>
+            <div class="three-columns">
+                <div><img src="img/LogoAgenciaAutos.png" alt="logo" style="width: 300px;"></div>
+                <div class="fields"> 
+                    <div class="marcas">
+                        <h1>Marca de preferencia </h1>
+                    <hr style="width: 700px;"> <br>
+                    <label for="text"> <input type="radio" name="" id=""> Mercedes Benz </label> 
+                    <label for="text"> <input type="radio" name="" id=""> BMW </label> 
+                    <label for="text"> <input type="radio" name="" id=""> INFINITI</label> 
+                    <label for="text"> <input type="radio" name="" id=""> Audi </label> 
+                    <label for="text"> <input type="radio" name="" id=""> Porsche </label> 
+                    </div>
+                </div>
+                
+                <div class="fields">
+                    <div class="marcas"> 
+                        <h1>Modelo</h1>
+                        <hr style="width: 700px;"> <br>
+                        <label for="text"> <input type="radio" name="" id=""> SUV </label>
+                        <label for="text">  <input type="radio" name="" id=""> Deportivo</label>
+                        <label for="text">  <input type="radio" name="" id=""> Familiar</label>
+                        <label for="text">  <input type="radio" name="" id=""> Suvan</label>
+                    </div>
+                </div>
+                
+            </div>
+
+
+            <div class="three-columns">
+                <div class="marcas">
+                    <h1 class="estiloh1" >Renta de autos de lujo</h1>
+                    <p style="font-weight: bold; font-size: 25px; text-align: start;" >Datos del cliente</p>
+                    <hr style="width: 550px;">
+                    <div class="fields">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" >
+
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" name="apellidos" >
+
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" >
+
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" >
+
+                        <label for="date">Fecha</label>
+                        <input type="date" id="date" name="date">
+                     </div>
+                </div>
+
+                <div> 
+                    <hr style="width: 700px;"> 
+                    <div class="img-container">
+                        <div>  <img src="img/audi-logo.png" alt=""> </div>
+                        <div> <img src="img/BMW-logo.png" alt=""> </div> 
+                        <div>  <img src="img/infiniti.png" alt=""> </div>
+                        <div> <img src="img/mercedes-benz-logo.png" alt=""> </div> 
+                        <div> <img src="img/porsche.png" alt=""> </div> 
+                    </div>
+                    
+                </div>
+
+                <div class="marcas  ">
+                     <h1 >Servicios extra</h1>
+                        <div class="fields">                                   
+                            <label for="text">La renta del carro puede estar acompañado de servicios extras:</label>
+
+                            <label for="text">
+                                Contratacion de chofer all day 
+                                <input type="checkbox" name="" id="" > 
+                            </label>
+                            
+                            <label for="text">
+                                Traslado de hotel al aeropuerto
+                                 <input type="checkbox" name="" id=""> 
+                            </label>
+                           
+                            <label for="text">
+                                Kilometraje ilimitado
+                                <input type="checkbox" name="" id="">
+                            </label>
+                             
+                            <label for="text">
+                                Auto Electrico
+                                <input type="checkbox" name="" id=""> 
+                            </label>
+                            
+                            <label for="text">
+                                Esterilización diaria nocturna
+                                <input type="checkbox" name="" id=""> 
+                            </label>
+                            
+                            <label for="text">
+                                internet wifi in car
+                                <input type="checkbox" name="" id="">
+                            </label>
+                             
+                            <br>
+                            <br>
+                                <input type="button" class="btn"  value="Hacer tu reservación"> 
+                         </div>
+                </div>
+               
+            </div>
+        </form>
+
+        <FOoter>
+            <p>
+                Página elaborada por: Angel Fernando Pérez García
+            </p>
+            <p>
+                <a href="index.html">Página principal</a>
+            </p>
+            <p>
+                @Todos los derechos reservados &copy; 2025
+            </p>
+        </FOoter>
+</body>
+</html>
