@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Investigación GRID + Posicionamiento</title>
-  <style>
-    body {
+ 
+ <style>
+   
+   body {
       font-family: Arial, sans-serif;
       background-color: #d3d3d3;
       margin: 40px;
@@ -66,7 +68,24 @@
       grid-column: 1 / 3; /* Ocupa dos columnas */
       background-color: #3ab1e0;
     }
+
+    .references {
+      list-style-type: none;
+      padding: 0;
+      max-width: 800px;
+      margin: auto;
+      justify-items: center;
+    }
+
+    a{
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: bold;
+        color: black;
+    }
+
   </style>
+
 </head>
 <body>
     <div class="container">
@@ -96,7 +115,7 @@
   <p>La propiedad <code>display: grid</code> permite construir diseños complejos de manera simple y clara. Se puede complementar con propiedades como <code>position</code> para controlar elementos internos. Además, muchas propiedades de Flexbox como <code>justify-content</code> y <code>align-items</code> también se aplican en Grid.</p>
 
   <h2>Referencias</h2>
-  <ul>
+  <ul class="references">
     <li>MDN Web Docs: <a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_grid_layout" target="_blank">CSS Grid Layout</a></li>
     <li>W3Schools: <a href="https://www.w3schools.com/css/css_grid.asp" target="_blank">CSS Grid Tutorial</a></li>
   </ul>
