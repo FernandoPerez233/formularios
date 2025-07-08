@@ -1,0 +1,159 @@
+<html>
+	<head>
+	<title>Nutrición</title>
+	</head>
+	<body bgcolor="#FFFFFF">
+		
+		<img src="img/redes.jpg" width=100%><br>
+        <img src="img/logo.jpg" width=100%> 
+		<br>
+		<font color="#FFE4C4" size=5> <b>Servicios </b></font>
+        <font color="grey">
+        <ul>
+            <li>Control de peso</li>
+            <li>Prevención y tratamiento de enfermedades crónicas</li>
+        </ul>
+		<br>
+        Todas nuestras consultas incluyen análisis de composición corporal InBody, evaluación clínica nutricional, plan de alimentación individualizado, lista de productos recomendados, recomendaciones generales (ejercicio, estilo de vida, suplementación en caso necesario) y asesoría via Whatsapp.
+        <br>
+        *Todos nuestros paquetes tienen una vigencia de 6 meses a partir de la primera consulta
+        </font><br><br><br>
+		<form name="Nutrición" id="Nutrición" action="#" method="GET"> 
+		<table  width="100%">
+		  <tr bgcolor="#FFE4C4"  align="center">
+                <td ><font size="4" color="FFFFFF"><b>Consulta online o presencial</b></font></td>
+                <td ><font size="4" color="FFFFFF"><b>Otros Servicios</b></font></td>
+                <td ><font size="4" color="FFFFFF"><b>Preparación</b></font></td>       
+          </tr>    
+          <tr>
+            <td>
+                <input type="radio" name="consulta" id="primera" value="850"><font color="grey">Primera Consulta $850 MXN<br
+                <input type="radio" name="consulta" id="seguimiento" value="700">Seguimiento  $700 MXN<br>
+                <input type="radio" name="consulta" id="paquetede3" value="2000">Paquete de 3 Consultas  $2,000 MXN<br>
+                <input type="radio" name="consulta" id="paqueteparejas" value="5000">Paquete  pareja  $5,000 MXN<br>
+                </font>
+
+            </td>
+            <td>
+              
+			  <select name="servicios" id="servicios">
+				<option><font color="grey">Análisis de Composición corporal Sin consulta +  $200</font></option>
+				<option><font color="grey">Análisis de Composición corporal con consulta +  $1000</font></option>
+			  </select>
+                
+			</td>
+			<td >
+			   <font color="grey">
+		        <input type="checkbox" name="recetas" id="recetas" value="1000">Recetas $1,000<br>
+				<input type="checkbox" name="ejercicios" id="ejercicios" value="1000">Ejercicios  $1,000<br>
+				<input type="checkbox" name="revista" id="revista" value="150" >Revista semanal $150<br>
+                </font>
+			</td>
+		</tr>	
+      </table>
+      <table>
+		<tr align="center">
+          <img src="img/contacto.jpg" width=100%>   
+        </tr>
+      </table>
+      <table  width="70%" align="center">
+          <tr bgcolor="#FFE4C4"  align="center">
+              <th><font color ="white" size="3">AGENDA TU CITA</font><br></th>
+              <th bgcolor="#FFE4C4"><font size="3" color="white" >TIPO DE PAGO</font><br></th>
+              <th bgcolor="#FFE4C4"><font size="3"color="white">REQUIERE FACTURA?(si o no) </font><br></th>
+          </tr>
+          <tr>
+            <td>
+				Nombre<input type="text" size="25"><br>
+			    Domicilio<input type="text" size="25"><br>
+		   </td>
+           <td>
+			  <select name="tipoPago" id="tipoPago">
+                <option value="efectivo">Efectivo +0%</option>
+                <option value="tarjeta">Tarjeta de Credito o Debito +6%</option>
+                <option value="transferencia">Transferencia Electronica + 3%</option>
+              </select>
+			</td>	  
+            <td>
+			   <input type="text" name="FAC" size="15"> 
+			</td>
+          </tr>			
+		</table>	
+        <hr color="black">
+        <br> <br>
+        <button type="button" id="pago" style="background-color: #FFE4C4; color: black; font-size: 20px; width: 100%; height: 50px; border-radius: 10px; border: none; cursor: pointer;" onclick="calcular()">
+            <font color="white" size="3">Calcular precio</font>
+         </button>
+         <label>Total a Pagar:</label>
+                <input type="text" id="resultado" readonly style="width: 100%; padding: 10px; margin-top: 10px; border: 2px solid #3498db; border-radius: 5px; font-size: 16px;">
+
+    <button type="button" style="background-color: #4CAF50; color: white; font-size: 18px; width: 100%; height: 50px; border-radius: 10px; border: none; cursor: pointer; margin-top: 10px;" onclick="mostrarGracias()">
+    Gracias por tu interés
+    </button>
+	
+</form>
+	</body>
+
+    <script>
+       var formulario = document.getElementById("Nutrición");
+
+function calcular(){
+    var total = 0;
+    
+    // 1. Consulta online o presencial (radio buttons)
+    if (formulario.primera.checked) {
+        total += parseInt(formulario.primera.value);
+    } else if (formulario.seguimiento.checked) {
+        total += parseInt(formulario.seguimiento.value);
+    } else if (formulario.paquetede3.checked) {
+        total += parseInt(formulario.paquetede3.value);
+    } else if (formulario.paqueteparejas.checked) {
+        total += parseInt(formulario.paqueteparejas.value);
+    }
+
+    // 2. Otros servicios (select)
+    var servicioSeleccionado = formulario.servicios.value;
+    if (servicioSeleccionado === "Análisis de Composición corporal Sin consulta +  $200") {
+        total += 200;
+    } else if (servicioSeleccionado === "Análisis de Composición corporal con consulta +  $1000") {
+        total += 1000;
+    }
+    
+    // 3. Preparación (checkboxes)
+    if (formulario.recetas.checked) {
+        total += parseInt(formulario.recetas.value);
+    }
+    
+    if (formulario.ejercicios.checked) {
+        total += parseInt(formulario.ejercicios.value);
+    }
+    
+    if (formulario.revista.checked) {
+        total += parseInt(formulario.revista.value);
+    }
+    
+    // 4. Tipo de pago (porcentajes) - si tienes el select configurado
+     var tipoPago = formulario.tipoPago.value;
+     if (tipoPago === "tarjeta") {
+         total = total * 1.06;
+     } else if (tipoPago === "transferencia") {
+         total = total * 1.03;
+    }
+    
+    // 5. Requiere factura (si o no)
+    var requiereFactura = formulario.FAC.value.toLowerCase();   
+    if (requiereFactura === "si") {
+    } else if (requiereFactura === "no") {
+    } else {
+        alert("Por favor, ingresa 'si' o 'no' para la factura.");
+        return; 
+    }
+    // Mostrar resultado
+    formulario.resultado.value = "$" + total + " MXN";
+    alert("¡Gracias por tu interés en nuestros servicios de nutrición!");
+}
+
+
+
+    </script>
+</html>
